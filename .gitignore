@@ -1,0 +1,5 @@
+# .DS_Storeは要らない
+*.DS_Store
+
+# reference/は要らない
+reference/

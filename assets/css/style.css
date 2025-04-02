@@ -1,0 +1,202 @@
+/* 
+Base style
+*/
+body{
+    font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+p{
+    font-size: 12px;
+    text-align: left;
+    margin: 0;
+}
+
+/* 
+main
+*/
+.main{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 
+section
+*/
+.section{
+    display: block;
+    padding: 60px 15px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.section.section-secounday {
+    background: hsl(0, 0%, 94%);
+}
+.section-headline{
+    text-align: left;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0 20px 50px;
+    margin: 0;
+}
+.section-inner{
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto 50px;
+    padding-bottom: 60px;
+    border-bottom: solid #C0C0C0;
+}
+.section-inner.end{
+    border-style: none;
+}
+.inner-headline{
+    font-size: 20px;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 30px;
+}
+
+/*
+listbox
+*/
+.listbox-group{
+    display: flex;
+    gap: 0 40px;
+    padding: 0;
+
+}
+.listbox{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+.listbox-title{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.list{
+    display: flex;
+    gap: 0 10px;
+    margin: 0;
+}
+
+/*
+figure
+*/
+.figure{
+    display: flex;
+    margin: 0;
+}
+/* .about-image */
+.caption{
+    display: block;
+    padding-left: 30px;
+}
+.fig-title{
+    font-size: 20px;
+    margin: 0;
+    padding: 0 0 5px;
+    text-align: left;
+}
+.fig-description{
+    color:#868686;
+}
+
+.hero {
+    /* vw,vh:画面全体100%表示 */
+    width: 100vw;
+    height: 100vh;
+    /* positonを相対的にする */
+    position: relative;
+    /* はみ出した部分を非表示にする */
+    overflow: hidden;
+}
+.hero > strong {
+    /* .hero内で絶対的にする */
+    position: absolute;
+    /* 重なりの優先度(10がMAX) */
+    z-index: 3;
+    /* .hero内にて中心表示 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    /* color: #fff; */
+    color: #fff;
+    /* ボールド字体 */
+    font-weight: bold;
+    /* ブロック表記 */
+    display: block;
+    /* 横幅を全体的にする */
+    width: 100%;
+    /* テキストを中央にする */
+    text-align: center;
+}
+.hero > video{
+    z-index: 1;
+    position: absolute;
+    width:auto;
+    height: 115%;
+}
+
+/* 
+about
+*/
+.about-title.roman{
+    font-size: 12px;
+}
+
+/* 
+skill
+*/
+.skill-text{
+    padding-top: 30px;
+    color:#868686;
+}
+.skill-list-text{
+    width: 60px;
+}
+
+/* 
+result
+*/
+.result-link{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .25s;
+}
+.result-link:hover{
+    background-color: #eee;
+}
+
+/* 
+last
+*/
+.last{
+    background: hsl(0, 0%, 94%);
+    display: block;
+    padding: 30px 15px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.last-headline{
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding: 0 0 10px;
+}
+.last-text{
+    text-align: center;
+    line-height: 1.5;
+}
