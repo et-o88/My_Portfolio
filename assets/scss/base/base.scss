@@ -1,0 +1,15 @@
+@use "../base/global.scss" as *;
+
+.Page{
+    font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    background-color: $white;
+    color: $black;
+
+    // &--index{
+
+    // }
+
+    &--contact{
+        background-color: $brackgray;
+    }
+}

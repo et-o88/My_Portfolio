@@ -1,202 +1,969 @@
-/* 
-Base style
-*/
-body{
-    font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-    color: #333;
-}
-p{
-    font-size: 12px;
-    text-align: left;
-    margin: 0;
+/*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+  /* min-width: 0; */
 }
 
-/* 
-main
-*/
-.main{
-    width: 100%;
-    height: auto;
-    display: block;
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
 }
 
-/* 
-section
-*/
-.section{
-    display: block;
-    padding: 60px 15px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
 }
-.section.section-secounday {
-    background: hsl(0, 0%, 94%);
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
 }
-.section-headline{
-    text-align: left;
-    font-size: 40px;
-    font-weight: bold;
-    padding: 0 20px 50px;
-    margin: 0;
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
 }
-.section-inner{
-    display: block;
-    width: 80%;
-    height: auto;
-    margin: 0 auto 50px;
-    padding-bottom: 60px;
-    border-bottom: solid #C0C0C0;
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
 }
-.section-inner.end{
-    border-style: none;
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.inner-headline{
-    font-size: 20px;
-    text-align: left;
-    margin: 0;
-    padding: 0 0 30px;
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none; /* 1 */
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit; /* 2 */
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Fix appearance for Firefox
+ */
+[type=number] {
+  -moz-appearance: textfield;
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
 }
 
 /*
-listbox
-*/
-.listbox-group{
-    display: flex;
-    gap: 0 40px;
-    padding: 0;
-
-}
-.listbox{
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    gap: 10px;
-}
-.listbox-title{
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-.list{
-    display: flex;
-    gap: 0 10px;
-    margin: 0;
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
 }
 
 /*
-figure
-*/
-.figure{
-    display: flex;
-    margin: 0;
-}
-/* .about-image */
-.caption{
-    display: block;
-    padding-left: 30px;
-}
-.fig-title{
-    font-size: 20px;
-    margin: 0;
-    padding: 0 0 5px;
-    text-align: left;
-}
-.fig-description{
-    color:#868686;
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
 }
 
-.hero {
-    /* vw,vh:画面全体100%表示 */
-    width: 100vw;
-    height: 100vh;
-    /* positonを相対的にする */
-    position: relative;
-    /* はみ出した部分を非表示にする */
-    overflow: hidden;
-}
-.hero > strong {
-    /* .hero内で絶対的にする */
-    position: absolute;
-    /* 重なりの優先度(10がMAX) */
-    z-index: 3;
-    /* .hero内にて中心表示 */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    /* color: #fff; */
-    color: #fff;
-    /* ボールド字体 */
-    font-weight: bold;
-    /* ブロック表記 */
-    display: block;
-    /* 横幅を全体的にする */
-    width: 100%;
-    /* テキストを中央にする */
-    text-align: center;
-}
-.hero > video{
-    z-index: 1;
-    position: absolute;
-    width:auto;
-    height: 115%;
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit; /* 1 */
+  border-collapse: collapse;
 }
 
-/* 
-about
-*/
-.about-title.roman{
-    font-size: 12px;
+caption {
+  text-align: left;
 }
 
-/* 
-skill
-*/
-.skill-text{
-    padding-top: 30px;
-    color:#868686;
-}
-.skill-list-text{
-    width: 60px;
+td,
+th {
+  vertical-align: top;
+  padding: 0;
 }
 
-/* 
-result
-*/
-.result-link{
-    display: block;
-    color: #333;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color .25s;
-}
-.result-link:hover{
-    background-color: #eee;
+th {
+  text-align: left;
+  font-weight: bold;
 }
 
-/* 
-last
-*/
-.last{
-    background: hsl(0, 0%, 94%);
-    display: block;
-    padding: 30px 15px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
+.Page {
+  font-family: "Noto Sans JP", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  background-color: #fff;
+  color: #333;
 }
-.last-headline{
-    text-align: center;
-    font-size: 20px;
-    margin: 0;
-    padding: 0 0 10px;
+.Page--contact {
+  background-color: #454545;
 }
-.last-text{
-    text-align: center;
-    line-height: 1.5;
+
+.Layout__GridCol {
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
+.Layout__GridCol--sky-blue {
+  background-color: rgba(185, 223, 255, 0.6);
+  padding-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.HeaderNav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #fff;
+  border-bottom: solid thin #C0C0C0;
+  box-shadow: 0px 0px 16px -6px rgba(0, 0, 0, 0.6);
+}
+
+.HeaderNav__Title {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.HeaderNav__NavGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.HeaderNav__HomeText {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  transition: color 0.3s;
+}
+.HeaderNav__HomeText:hover {
+  color: #DB8E69;
+}
+
+.HeaderNav__ContactBtn {
+  display: flex;
+  width: 10rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #385CA8;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  color: white;
+  transition: background-color 0.3s;
+}
+.HeaderNav__ContactBtn:hover {
+  background-color: #DB8E69;
+}
+
+.HeaderNav__ContactText {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.HeaderNav__ContactIcon {
+  color: #fff;
+}
+
+.Header {
+  width: 100vw;
+  height: 50rem;
+  background-color: #69B6DB;
+  background-image: url("..//images/header.svg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  margin-bottom: 3rem;
+}
+
+.Header__Title {
+  padding-left: 10vw;
+  padding-top: 20vh;
+}
+
+.Header__TitleText {
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+.Header__ContactBtn {
+  display: flex;
+  width: 10rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #385CA8;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  color: white;
+  transition: background-color 0.3s;
+}
+.Header__ContactBtn:hover {
+  background-color: #DB8E69;
+}
+
+.Header__ContactText {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.Header__ContactIcon {
+  color: #fff;
+}
+
+.Profile {
+  padding-bottom: 3rem;
+}
+
+.Profile__Title {
+  display: flex;
+  gap: 0.25rem;
+  padding-bottom: 1.5rem;
+}
+
+.Profile__TitleShape {
+  width: 0.5rem;
+  height: 1.5rem;
+  border-radius: 2px;
+  background-color: #DB8E69;
+}
+
+.Profile__TitleText {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.Profile__Figure {
+  display: flex;
+  gap: 1rem;
+}
+
+.Profile__ImgGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Profile__Icon {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.Profile__XLink {
+  display: block;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
+
+.Profile__LinkGroup {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  transition: border-bottom solid thin #DB8E69 0.3s;
+}
+.Profile__LinkGroup:hover {
+  border-bottom: solid thin #DB8E69;
+}
+
+.Profile__LinkText {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.Profile__GithubLink {
+  display: block;
+  width: fit-content;
+}
+
+.Profile__Figcaption {
+  text-align: left;
+}
+
+.Profile__Name {
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  padding-bottom: 1rem;
+}
+
+.Profile__Desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+.History {
+  padding-bottom: 3rem;
+}
+
+.History__Title {
+  display: flex;
+  gap: 0.25rem;
+  padding-bottom: 1.5rem;
+}
+
+.History__TitleShape {
+  width: 0.5rem;
+  height: 1.5rem;
+  border-radius: 2px;
+  background-color: #DB8E69;
+}
+
+.History__TitleText {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.History__List {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  column-gap: 3rem;
+  row-gap: 1.5rem;
+}
+
+.History__Item {
+  display: flex;
+  gap: 1rem;
+}
+
+.History__Date {
+  display: block;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.History_Desc {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.Skill {
+  padding-bottom: 2rem;
+}
+
+.Skill__TitleLegendGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.Skill__Title {
+  display: flex;
+  gap: 0.25rem;
+  padding-bottom: 1.5rem;
+  padding-bottom: 0;
+}
+
+.Skill__TitleShape {
+  width: 0.5rem;
+  height: 1.5rem;
+  border-radius: 2px;
+  background-color: #DB8E69;
+}
+
+.Skill__TitleText {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.Skill__LegendList {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.Skill__LegendItem {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.Skill__LegendShape {
+  width: 24px;
+  height: 12px;
+}
+.Skill__LegendShape--light-blue {
+  background-color: #69B6DB;
+}
+.Skill__LegendShape--sky-blue {
+  background-color: #B9DFFF;
+}
+
+.Skill__LegendLabel {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.Skill__Group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
+  grid-template-rows: repeat(2, auto);
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.Skill__Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.Skill__Card--light-blue {
+  background-color: #69B6DB;
+}
+.Skill__Card--sky-blue {
+  background-color: #B9DFFF;
+}
+
+.Skill__CardTitle {
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.Skill__StarGroup {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Skill__Star {
+  color: #333;
+}
+.Skill__Star--fill-black {
+  fill: #333;
+}
+
+.Skill__CardDesc {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+.Skill__LevelTitle {
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.Skill__LevelList {
+  display: flex;
+  gap: 1rem;
+}
+
+.Skill__LevelItem {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.Skill__LevelNum {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.Skill__LevelDesc {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.Result__Title {
+  padding-left: 10rem;
+  padding-right: 10rem;
+  display: flex;
+  gap: 0.25rem;
+  padding-bottom: 1.5rem;
+}
+
+.Result__TitleShape {
+  width: 0.5rem;
+  height: 1.5rem;
+  border-radius: 2px;
+  background-color: #DB8E69;
+}
+
+.Result__TitleText {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.Result__Link {
+  display: block;
+}
+
+.Result__Figure {
+  display: grid;
+  grid-template-columns: 240px, 1fr;
+  grid-template-rows: repeat(2, auto);
+  column-gap: 1rem;
+  row-gap: 1.5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #C0C0C0;
+  transition: background-color 0.3s;
+}
+.Result__Figure:hover {
+  background-color: #C0C0C0;
+}
+.Result__Figure--border-bottom {
+  border-bottom: 1px solid #C0C0C0;
+}
+.Result__Figure > img {
+  width: 240px;
+  height: 240px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.Result__FigTitle {
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.Result__Desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100vw;
+  height: 12rem;
+  background-color: #69B6DB;
+}
+
+.Footer__Title {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.Footer__SubTitle {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.Footer__Text {
+  font-size: 0.8rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #333;
+}
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 1rem auto;
+  background-color: #fff;
+  border-radius: 8px;
+  color: #333;
+}
+
+.ContactForm__Title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  border-radius: 8px 8px 0px 0px;
+  margin-bottom: 1.5rem;
+  background-color: #B9DFFF;
+}
+
+.ContactForm__TitleText {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.ContactForm__InputArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ContactForm__Input {
+  padding: 0.5rem;
+  width: 60%;
+  height: 1.5rem;
+  font-size: 0.8rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  border: 1px solid #C0C0C0;
+}
+
+.ContactForm__InputTextArea {
+  padding: 0.5rem;
+  width: 60%;
+  font-size: 0.8rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  height: 10rem;
+  border-radius: 2px;
+  border: 1px solid #C0C0C0;
+}
+
+.ContactForm__ButtonArea {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ContactForm__Button {
+  display: flex;
+  width: 10rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #385CA8;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  color: white;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+.ContactForm__Button:hover {
+  background-color: #DB8E69;
+}
+
+/*# sourceMappingURL=style.css.map */

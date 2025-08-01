@@ -1,0 +1,14 @@
+@use "../base/global.scss" as *;
+
+// .Layout__Main{}
+
+.Layout__GridCol{
+    padding-left: $space_side-pc;
+    padding-right: $space_side-pc;
+
+    &--sky-blue{
+        background-color: $sky-blue-opacity;
+        padding-top: $space_m;
+        margin-bottom: $space_m;
+    }
+}

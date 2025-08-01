@@ -1,0 +1,78 @@
+// フォントサイズ
+$font-size_ss:0.8rem;
+$font-size_s:1rem;
+$font-size_m:1.5rem;
+$font-size_l:2rem;
+// 行間
+$line-height_one-row:1;
+$line-height_twe-row:1.5;
+// 文字間
+$letter-spacing:0.05em;
+
+// 文字スタイル
+@mixin font_style($font-size, $line-height){
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+// 余白
+$space_ss:0.5rem;
+$space_s:1rem;
+$space_m:1.5rem;
+$space_l:2rem;
+$space_ll:3rem;
+$space_o:4.5rem;
+
+$space_side-sp:1rem;
+$space_side-pc:10rem;
+
+
+// 色
+$black:#333;
+$brackgray:#454545;
+$gray:#C0C0C0;
+$white:#fff;
+$brown:#DB8E69;
+$blue:#385CA8;
+$light-blue:#69B6DB;
+$sky-blue:#B9DFFF;
+$sky-blue-opacity:rgba(185,223,255,0.6);
+
+// 再利用コンポーネント
+
+// コンタクトボタン
+@mixin contact-btn_pc{
+    display: flex;
+    width: 10rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
+    gap: $space_ss;
+    border-radius: 1rem;
+    color: white;
+    transition: background-color 0.3s;
+
+    &:hover{
+        background-color: $brown;
+    }
+}
+
+// タイトルdiv
+@mixin title{
+    display: flex;
+    gap: 0.25rem;
+    padding-bottom:$space_m;
+}
+// タイトルテキスト
+@mixin title-text{
+    @include font_style($font-size_m, $line-height_one-row);
+}
+// タイトル図形
+@mixin title-shape{
+    width: 0.5rem;
+    height: 1.5rem;
+    border-radius: 2px;
+    background-color: $brown;
+}

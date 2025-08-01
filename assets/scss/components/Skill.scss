@@ -1,0 +1,113 @@
+@use "../base/global.scss" as *;
+
+.Skill{
+    padding-bottom: $space_l;
+}
+.Skill__TitleLegendGroup{
+    display: flex;
+    align-items: center;
+    gap: $space_s;
+    padding-bottom: $space_m;
+}
+.Skill__Title{
+    @include title;
+    padding-bottom: 0;
+}
+.Skill__TitleShape{
+    @include title-shape;
+}
+.Skill__TitleText{
+    @include title-text;
+}
+.Skill__LegendList{
+    display: flex;
+    gap: $space_s;
+    align-items: center;
+}
+.Skill__LegendItem{
+    display: flex;
+    gap: $space_ss;
+    align-items: center;
+}
+.Skill__LegendShape{
+    width: 24px;
+    height: 12px;
+
+
+    &--light-blue{
+        background-color: $light-blue;
+    }
+    
+    &--sky-blue{
+        background-color: $sky-blue;
+    }
+
+}
+.Skill__LegendLabel{
+    @include font_style($font-size_s, $line-height_one-row);
+}
+.Skill__Group{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 280px);
+    grid-template-rows: repeat(2, auto);
+    justify-content: space-between;
+    gap: $space_s;
+    padding-bottom: $space_m;
+}
+.Skill__Card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space_ss;
+    padding: $space_s;
+
+    &--light-blue{
+        background-color: $light-blue;
+    }
+
+    &--sky-blue{
+        background-color: $sky-blue;
+    }
+}
+.Skill__CardTitle{
+    @include font_style($font-size_l, $line-height_one-row);
+    white-space: nowrap;
+}
+.Skill__StarGroup{
+    display: flex;
+    gap: $space_ss;
+    align-items: center;
+    justify-content: space-between;
+}
+.Skill__Star{
+    color: $black;
+
+    &--fill-black{
+        fill: $black
+    }
+}
+.Skill__CardDesc{
+    @include font_style($font-size_s, $line-height_twe-row);
+}
+// .Skill__Level{
+    
+// }
+.Skill__LevelTitle{
+    padding-bottom: $space_s;
+    @include font_style($font-size_s, $line-height_one-row);
+}
+.Skill__LevelList{
+    display: flex;
+    gap: $space_s;
+}
+.Skill__LevelItem{
+    display: flex;
+    gap: $space_ss;
+}
+.Skill__LevelNum{
+    @include font_style($font-size_s, $line-height_one-row);
+    white-space: nowrap;
+}
+.Skill__LevelDesc{
+    @include font_style($font-size_s, $line-height_one-row);
+}

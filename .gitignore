@@ -1,5 +1,7 @@
-# .DS_Storeは要らない
+# ファイル
 *.DS_Store
 
-# reference/は要らない
+# フォルダ
 reference/
+node_modules/
+”/

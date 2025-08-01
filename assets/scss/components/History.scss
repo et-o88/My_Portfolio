@@ -1,0 +1,36 @@
+@use "../base/global.scss" as *;
+
+.History{
+    padding-bottom: $space_ll;
+}
+.History__Title{
+    @include title;
+}
+.History__TitleShape{
+    @include title-shape;
+}
+.History__TitleText{
+    @include title-text;
+}
+.History__List{
+    display: grid;
+    width: fit-content;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    column-gap: $space_ll;
+    row-gap: $space_m;
+
+}
+.History__Item{
+    display: flex;
+    gap: $space_s;
+}
+.History__Date{
+    display: block;
+    white-space: nowrap;
+    @include font_style($font-size_s, $line-height_one-row)
+}
+.History_Desc{
+    @include font_style($font-size_s, $line-height_one-row)
+}

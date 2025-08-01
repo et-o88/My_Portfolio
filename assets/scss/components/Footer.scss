@@ -1,0 +1,24 @@
+@use "../base/global.scss" as *;
+
+.Footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $space_s;
+    width: 100vw;
+    height: 12rem;
+    background-color: $light-blue;
+}
+.Footer__Title{
+    @include font_style($font-size_m, $line-height_twe-row);
+    color: $white;
+}
+.Footer__SubTitle{
+    @include font_style($font-size_s, $line-height_twe-row);
+    color: $white;
+}
+.Footer__Text{
+    @include font_style($font-size_ss, $line-height_one-row);
+    color: $black;
+}

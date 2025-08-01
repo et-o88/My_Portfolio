@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>      
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせフォーム</title>
+    <meta name="description" content="お問い合わせフォーム">
+
+    <!-- フォント取得 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100:700&display=swap" rel="stylesheet">
+
+    <!-- css取得 -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body class="Page--contact">
+    <form class="ContactForm" action="https://formspree.io/f/xdkddqzj" method="post">
+        <div class="ContactForm__Title">
+            <h2 class="ContactForm__TitleText">お問い合わせフォーム</h2>
+        </div>
+        <div class="ContactForm__InputArea">
+            <input class="ContactForm__Input" type="text" name="name" placeholder="お名前" required/>
+            <input class="ContactForm__Input" type="email" name="email" placeholder="メールアドレス" required/>
+            <textarea class="ContactForm__InputTextArea" name="message" placeholder="お問い合わせ内容" required></textarea>
+        </div>
+        <div class="ContactForm__ButtonArea">
+            <input class="ContactForm__Button" type="submit" value="送信" />
+            <input class="ContactForm__Button" type="reset" value="リセット" />
+        </div>
+    </form>
+</body>

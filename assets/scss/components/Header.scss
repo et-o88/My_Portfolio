@@ -1,0 +1,30 @@
+@use "../base/global.scss" as *;
+
+.Header{
+    width: 100vw;
+    height: 50rem;
+    background-color: $light-blue;
+    background-image: url("..//images/header.svg");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    margin-bottom: $space_ll;
+}
+.Header__Title{
+    padding-left: 10vw;
+    padding-top: 20vh;
+}
+.Header__TitleText{
+    @include font_style($font-size_l, $line-height_twe-row);
+    color: $white;
+    padding-bottom: 1rem;
+}
+.Header__ContactBtn{
+    @include contact-btn_pc;
+}
+.Header__ContactText{
+    @include font_style($font-size_m, $line-height_one-row);
+}
+.Header__ContactIcon{
+    color: $white;
+}

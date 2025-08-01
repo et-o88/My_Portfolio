@@ -1,0 +1,63 @@
+@use "../base/global.scss" as *;
+
+.Profile{
+    padding-bottom: $space_ll;
+}
+.Profile__Title{
+    @include title;
+}
+.Profile__TitleShape{
+    @include title-shape();
+}
+.Profile__TitleText{
+    @include title-text;
+}
+.Profile__Figure{
+    display: flex;
+    gap: $space_s;
+}
+.Profile__ImgGroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Profile__Icon{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: $space_s;
+}
+.Profile__XLink{
+    display: block;
+    margin-bottom: $space_ss;
+    width: fit-content;
+}
+.Profile__LinkGroup{
+    display: flex;
+    gap: $space_ss;
+    align-items: center;
+
+    transition: border-bottom solid  thin $brown 0.3s;
+    
+    &:hover{
+        border-bottom: solid thin $brown;
+    }
+}
+.Profile__LinkText{
+    @include font_style($font-size_m, $line-height_one-row);
+}
+.Profile__GithubLink{
+    display: block;
+    width: fit-content;
+}
+.Profile__Figcaption{
+    text-align: left;
+}
+.Profile__Name{
+    @include font_style($font-size_l, $line-height_one-row);
+    padding-bottom: $space_s;
+}
+.Profile__Desc{
+    @include font_style($font-size_s, $line-height_twe-row);
+}

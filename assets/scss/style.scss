@@ -1,0 +1,15 @@
+@use "../../node_modules/destyle.css/destyle.css" as *;
+
+@use "./base/base.scss" as *;
+
+@use "./components/Layout.scss" as *;
+
+@use "./components/HeaderNav.scss" as *;
+@use "./components/Header.scss" as *;
+@use "./components/Profile.scss" as *;
+@use "./components/History.scss" as *;
+@use "./components/Skill.scss" as *;
+@use "./components/Result.scss" as *;
+@use "./components/Footer.scss" as *;
+
+@use "./components/Contact.scss" as *

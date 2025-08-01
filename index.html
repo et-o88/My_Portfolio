@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>      
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Eito KimuraのPortfolio</title>
     <meta name="description" content="EITO KIMURAのポートフォリオサイトです。お仕事を依頼していただく方はご閲覧してくださると助かります。">
 
     <!-- フォント取得 -->
@@ -13,34 +13,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100:700&display=swap" rel="stylesheet">
 
     <!-- css取得 -->
-    <link rel="stylesheet" href="assets/css/sanitize.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- 画像取得 -->
-    
 </head>
-<body>
-    <div class="main">
-        <div class="hero">
-            <strong>My Portfolio</strong>
-            <div class="hero-particles" id="particles-js"></div>
-            <video autoplay loop muted preload>
-                <source src="assets/videos/hero.mp4" type="video/mp4">
-            </video>
+<body class="Page--index">
+    <!-- ヘッダーナビ -->
+    <nav class="HeaderNav">
+        <p class="HeaderNav__Title">Eito Kimura</p>
+        <div class="HeaderNav__NavGroup">
+            <a class="HeaderNav__PageTop" href="#">
+                <p class="HeaderNav__HomeText">Home</p>
+            </a>
+            <button class="HeaderNav__ContactBtn" onclick="location.href='contact.html'">
+                <p class="HeaderNav__ContactText">Contact</p>
+                <i class="HeaderNav__ContactIcon" data-feather="external-link"></i>
+            </button>
         </div>
-        <section class="section">
-            <h1 class="section-headline">自己紹介</h1>
-            <div class="section-inner">
-                <h2 class="inner-headline">プロフィール</h2>
-                <figure class="figure">
-                    <img class="fig-image" src="https://dummyimage.com/200x300/000/fff" alt="About image">
-                    <figcaption class="caption">
-                        <p class="about-title roman">eito kimura</p>
-                        <p class="fig-title">木村 エイト</p>
-                        <p class="fig-description">
-                            2004年生まれ。愛知県在住。
-                            <br/>
-                            企業内訓練校を卒業後、車両製造会社で製品開発に携わり、開発の過程で画像処理や業務の自動化をPythonを用いて行っています。
+    </nav>
+
+    <!-- ヘッダー -->
+    <header class="Header">
+        <div class="Header__Title">
+            <h1 class="Header__TitleText">
+                Eito Kimuraの<br>ポートフォリオへようこそ
+            </h1>
+            <button class="Header__ContactBtn" onclick="location.href='contact.html'">
+                <p class="Header__ContactText">Contact</p>
+                <i class="Header__ContactIcon" data-feather="external-link"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- メイン -->
+    <main class="Layout__Main">
+        
+        <!-- 自己紹介 -->
+        <div class="Layout__GridCol">
+            
+            <!-- プロフィール -->
+            <section class="Profile">
+                <h2 class="Profile__Title">
+                    <span class="Profile__TitleShape"></span>
+                    <span class="Profile__TitleText">プロフィール</span>
+                </h2>
+                <figure class="Profile__Figure">
+                    <div class="Profile__ImgGroup">
+                        <img class="Profile__Icon" src="/assets/images/my-icon.jpg" alt="profile-icon">
+                        <a class="Profile__XLink" href="https://x.com/gengar_____888">
+                            <div class="Profile__LinkGroup">
+                                <i data-feather="twitter"></i>
+                                <p class="Profile__LinkText">x</p>
+                            </div>
+                        </a>
+                        <a class="Profile__GithubLink" href="https://github.com/et-o88">
+                            <div class="Profile__LinkGroup">
+                                <i data-feather="github"></i>
+                                <p class="Profile__LinkText">github</p>
+                            </div>
+                        </a>
+                    </div>
+                    <figcaption class="Profile__Figcaption">
+                        <h3 class="Profile__Name">木村 エイト</h3>
+                        <p class="Profile__Desc">
+                            2004年生まれ。愛知県在住。企業内訓練校を卒業後、車両製造会社で製品開発に携わり、開発の過程で画像処理や業務の自動化をPythonを用いて行っています。
                             また、副業としてスクレイピング業務をメインにクラウドワークスで活動しています。
                             プログラムを始めたきっかけは学生時代に部活として参加したロボカップ（ロボットでサッカーをする活動）です。
                             自身のアイデアをプログラムで形にし、それを基に勝敗が決まるという環境の中で、全国3位、アジア5位という成果を収めました。
@@ -50,191 +85,267 @@
                         </p>
                     </figcaption>
                 </figure>
-            </div>
-            <div class="section-inner end">
-                <h2 class="inner-headline">経歴</h2>
-                <div class="listbox-group">
-                    <ul class="listbox">
-                        <li class="list">
-                            <p class="list-text">2004年02月</p>
-                            <p class="list-text">岐阜県で生まれる</p>
-                        </li>
-                        <li class="list">
-                            <p class="list-text">2019年04月</p>
-                            <p class="list-text">企業内訓練校入学</p>
-                        </li>
-                        <li class="list">
-                            <p class="list-text">2022年3月</p>
-                            <p class="list-text">ロボカップ全国大会3位達成</p>
-                        </li>
-                    </ul>
-                    <ul class="listbox">
-                        <li class="list">
-                            <p class="list-text">2022年04月</p>
-                            <p class="list-text">職場配属後、製品検査の画像処理を担当</p>
-                        </li>
-                        <li class="list">
-                            <p class="list-text">2024年08月</p>
-                            <p class="list-text">webスクレイピング学習開始</p>
-                        </li>
-                        <li class="list">
-                            <p class="list-text">2024年11月</p>
-                            <p class="list-text">xでのアフィリエイト作業を自動化開発</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="section section-secounday">
-            <h1 class="section-headline">スキル</h1>
-            <div class="section-inner">
-                <h2 class="inner-headline">スキルレベル指標</h2>
-                <div class="listbox-group">
-                    <ul class="listbox">
-                        <li class="list">
-                            <p class="list-text">レベル１</p>
-                            <p class="list-text">基礎習得している</p>
-                        </li>
-                        <li class="list">
-                            <p class="list-text">レベル２</p>
-                            <p class="list-text">小規模開発できる</p>
-                        </li>
-                    </ul>
-                    <ul class="listbox">
-                        <li class="list">
-                            <p class="list-text">レベル３</p>
-                            <p class="list-text">自主開発できる</p>
-                        </li>
-                        <li class="list">
-                            <p class="list-text">レベル４</p>
-                            <p class="list-text">技術伝承できる</p>
-                        </li>
-                    </ul>
-                </div>
-                <p class="skill-text">レベル２から業務での対応ができます。詳細は依頼の際に聞いてください。</p>
-            </div>
-            <div class="section-inner end">
-                <h2 class="inner-headline">保有スキル</h2>
-                <div class="listbox-group">
-                    <ul class="listbox">
-                        <p class="listbox-title">言語</p>
-                        <li class="list">
-                            <p class="skill-list-text">c++</p>
-                            <p class="list-text">レベル３</p>
-                        </li>
-                        <li class="list">
-                            <p class="skill-list-text">python</p>
-                            <p class="list-text">レベル３</p>
-                        </li>
-                        <li class="list">
-                            <p class="skill-list-text">html</p>
-                            <p class="list-text">レベル１</p>
-                        </li>
-                        <li class="list">
-                            <p class="skill-list-text">css</p>
-                            <p class="list-text">レベル１</p>
-                        </li>
-                        <li class="list">
-                            <p class="skill-list-text">javascript</p>
-                            <p class="list-text">レベル１</p>
-                        </li>
-                    </ul>
-                    <ul class="listbox">
-                        <p class="listbox-title">ツール</p>
-                        <li class="list">
-                            <p class="skill-list-text">git</p>
-                            <p class="list-text">レベル２</p>
-                        </li>
-                        <li class="list">
-                            <p class="skill-list-text">mysql</p>
-                            <p class="list-text">レベル２</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <h1 class="section-headline">実績</h1>
-            <a href="https://www.robocupjunior.jp/2022keihanna_results.html" class="result-link">
-                <div class="section-inner">
-                    <h2 class="inner-headline">ロボカップ全国３位</h2>
-                    <figure class="figure">
-                        <img class="fig-image" src="assets/images/001-robot.png" width="150px" height="150px" alt="Achievement image">
-                        <figcaption class="caption">
-                            <p class="fig-description">
-                                学生時代(2022年)にロボカップサッカーライトウェイトにて全国３位を受賞しました。<br>
-                                赤外線の放ったボールを認識しロボット２台を巧みに駆使してゴールを競う競技です。<br>
-                                ロボットは１から制作する必要があり、私はロボットの設計とソフトウェアをチームリーダーとして経験しました。使用していた言語はc++です。<br>
-                                この活動がプログラマーになる自分の原点でここで養われた独創的なアイデアを育む力とそれを実現する力を活かし様々な業務に貢献しております。<br>
-                                ロボットやプログラムに興味のある学生は私がイチオシする活動です。(笑)<br>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </a>
-            <div class="result-link">
-                <div class="section-inner">
-                    <h2 class="inner-headline">製品外観検査工程の自動化</h2>
-                    <figure class="figure">
-                        <img class="fig-image" src="assets/images/search-product.png" width="150px" height="150px" alt="Achievement image">
-                        <figcaption class="caption">
-                            <p class="fig-description">
-                                私が勤める会社での活動です。プログラムを開示することができませんが紹介します。<br>
-                                製品外観を人が目視にて確認していた作業をpython opencvにて自動化し、アプリとして運用できるようにしました。<br>
-                                これによって、不良流出を完全に無くすことができ、作業者負担を減らすことで会社に貢献しました<br>
-                                opencv自体は使用したことがありましたが人のためにアプリ開発をしたことが無かったため、作業者が使用しやすいよう意見を取り入れることで
-                                簡単で誰もが使いやすく作成できたことが楽しく嬉しかったです。<br>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <a href="" class="result-link">
-                <div class="section-inner">
-                    <h2 class="inner-headline">福岡バリアフリーマップのスクレイピング開発</h2>
-                    <figure class="figure">
-                        <img class="fig-image" src="assets/images/002-web-scraper.png" width="150px" height="150px" alt="Achievement image">
-                        <figcaption class="caption">
-                            <p class="fig-description">
-                                スクレイピング業務のポートフォリオとしまして、福岡バリアフリーマップのスクレイピング開発を行いました。使用した言語はpythonでseleniumライブラリを使用しました。<br>
-                                検索項目が「誰が」「なにする」「どこで」の３つの項目にて計１３２０通り(４x６x５５)の検索結果をcsvでまとめるプログラムを作成しました。<br>
-                                指定された検索情報から必要なデータを取り出し、エクスポートすることが可能です。<br>
-                                取り出すデータ数が膨大だと、予期せぬエラー(ロードやデータの重複など)が発生することがありそれを対処するトラブルシューティング能力を鍛えることができました。<br>
-                                現在進行形で技能向上に向けて勉強中ですが、ユーザー様のご用件に沿った業務遂行致しますので是非ご依頼ください！<br>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </a>
-            <div class="result-link">
-                <div class="section-inner end">
-                    <h2 class="inner-headline">Xの自動ポストアプリの開発</h2>
-                    <figure class="figure">
-                        <img class="fig-image" src="assets/images/003-integration.png" width="150px" height="150px" alt="Achievement image">
-                        <figcaption class="caption">
-                            <p class="fig-description">
-                                アフィリエイト作業をする友人から依頼を受けXの自動ポストアプリを開発しました。使用した言語はpythonでseleniumライブラリを使用しました。また、googleスプレッドシートとXのAPIも使用しました。<br>
-                                指定されたユーザーでスクレイピングにてXにログインしgoogleスプレッドシートに記載されている情報をポストする工程を自動化しました。<br>
-                                ユーザー様の関係でプログラムを開示することはできませんが、Xの自動ログインは様々な制約がある中でアフィリエイト活動がスムーズに行えるようになったということで
-                                非常に感謝されており、とても嬉しかった活動です。<br>
-                                これは私の初めて受けたスクレイピング業務依頼でもあり、良い経験をすることができました！<br>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-        <div class="last">
-            <h2 class="last-headline">Thank you for watiching!</h2>
-            <p class="last-text">
-                以上、私のポートフォリオでした。<br>
-                初めてのWEBサイトの制作で見にくい点沢山あると思いますが、最後までご閲覧いただきありがとうございました。<br>
-                お仕事の依頼是非検討ください！！
-            </p>
-        </div>
-    </div>
+            </section>
 
-    <script src="assets/js/particles.min.js"></script>
-    <script src="./assets/js/app.js"></script>
+            <!-- 経歴 -->
+            <section class="History">
+                <h2 class="History__Title">
+                    <span class="History__TitleShape"></span>
+                    <span class="History__TitleText">経歴</span>
+                </h2>
+                <ul class="History__List">
+                    <li class="History__Item">
+                        <time class="History__Date">2004年02月</time>
+                        <p class="History_Desc">岐阜県で生まれる</p>
+                    </li>
+                    <li class="History__Item">
+                        <time class="History__Date">2019年04月</time>
+                        <p class="History_Desc">企業内訓練校入学</p>
+                    </li>
+                    <li class="History__Item">
+                        <time class="History__Date">2022年03月</time>
+                        <p class="History_Desc">ロボカップ全国大会3位達成</p>
+                    </li>
+                    <li class="History__Item">
+                        <time class="History__Date">2022年03月</time>
+                        <p class="History_Desc">職場配属後、製品検査の画像処理を担当</p>
+                    </li>
+                    <li class="History__Item">
+                        <time class="History__Date">2024年08月</time>
+                        <p class="History_Desc">webスクレイピング学習開始</p>
+                    </li>
+                    <li class="History__Item">
+                        <time class="History__Date">2024年10月</time>
+                        <p class="History_Desc">xでのアフィリエイト作業を自動化開発</p>
+                </ul>
+            </section>
+        </div>
+
+        <div class="Layout__GridCol Layout__GridCol--sky-blue">
+
+            <!-- 保有スキル -->
+            <section class="Skill">
+                <div class="Skill__TitleLegendGroup">
+                    <h2 class="Skill__Title">
+                        <span class="Skill__TitleShape"></span>
+                        <span class="Skill__TitleText">保有スキル</span>
+                    </h2>
+                    <ul class="Skill__LegendList">
+                        <li class="Skill__LegendItem">
+                            <span class="Skill__LegendShape Skill__LegendShape--light-blue"></span>
+                            <p class="Skill__LegendLabel">言語</p>
+                        </li>
+                        <li class="Skill__LegendItem">
+                            <span class="Skill__LegendShape Skill__LegendShape--sky-blue"></span>
+                            <p class="Skill__LegendLabel">ツール</p>
+                        </li>
+                    </ul>
+                </div> 
+                <div class="Skill__Group">
+                    <div class="Skill__Card Skill__Card--light-blue">
+                        <h3 class="Skill__CardTitle">C++</h3>
+                        <div class="Skill__StarGroup">
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                        </div>
+                        <p class="Skill__CardDesc">
+                            学生時代に自作ロボットを開発した経験があり、マイコン(arduino,teency)を用いた組み込み制御プログラムの開発が可能です。
+                            また、オブジェクト指向に基づいたクラス設計が可能です。
+                        </p>
+                    </div>
+                    <div class="Skill__Card Skill__Card--light-blue">
+                        <h3 class="Skill__CardTitle">Python</h3>
+                        <div class="Skill__StarGroup">
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                        </div>
+                        <p class="Skill__CardDesc">
+                            OpenCVを用いた画像処理の開発を行えます。また、Seleniumを用いたWebスクレイピングの自動化ツールを開発できます。
+                            さらに、tkinterを用いた簡易的なデスクトップアプリの作成も行えます。
+                        </p>
+                    </div>
+                    <div class="Skill__Card Skill__Card--light-blue">
+                        <h3 class="Skill__CardTitle">HTML/CSS</h3>
+                        <div class="Skill__StarGroup">
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                        </div>
+                        <p class="Skill__CardDesc">
+                            ポートフォリオサイトを構築できるレベルのHTML/CSSコーディングが可能です。
+                            Sassを用いた効率的なスタイル管理や、BEMを用いたCSS設計にも対応しています。
+                        </p>
+                    </div>
+                    <div class="Skill__Card Skill__Card--light-blue">
+                        <h3 class="Skill__CardTitle">Javascript</h3>
+                        <div class="Skill__StarGroup">
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                        </div>
+                        <p class="Skill__CardDesc">
+                            WEBサイトのパーティカルエフェクトの追加が可能です。
+                            Reactを用いたWEBサイト制作を学習中で、基本的なコンポーネント構成やステート管理について理解を深めています。
+                        </p>
+                    </div>
+                    <div class="Skill__Card Skill__Card--light-blue">
+                        <h3 class="Skill__CardTitle">API</h3>
+                        <div class="Skill__StarGroup">
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                        </div>
+                        <p class="Skill__CardDesc">
+                            APIを用いたプログラム開発が可能です。具体例として、GoogleスプレッドシートやXの自動化ツールをAPIを活用して制作した経験があります。
+                        </p>
+                    </div>
+                    <div class="Skill__Card Skill__Card--sky-blue">
+                        <h3 class="Skill__CardTitle">MySQL</h3>
+                        <div class="Skill__StarGroup">
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                        </div>
+                        <p class="Skill__CardDesc">
+                            SQLサーバーを用いたデータの管理や、必要なデータの抽出が可能です。
+                            開発の規模によってデータを管理したい際に使用することがあります。
+                        </p>
+                    </div>
+                    <div class="Skill__Card Skill__Card--sky-blue">
+                        <h3 class="Skill__CardTitle">Git</h3>
+                        <div class="Skill__StarGroup">
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                        </div>
+                        <p class="Skill__CardDesc">
+                            Gitを用いたバージョン管理や共同開発が可能です。
+                            GitHubを使用してオンラインでのリポジトリ管理や、GitHub Pagesを利用した簡易的なWEBサイトの作成が行えます。
+                        </p>
+                    </div>
+                    <div class="Skill__Card Skill__Card--sky-blue">
+                        <h3 class="Skill__CardTitle">Figma</h3>
+                        <div class="Skill__StarGroup">
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star Skill__Star--fill-black" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                            <i class="Skill__Star" data-feather="star"></i>
+                        </div>
+                        <p class="Skill__CardDesc">
+                            Figmaを用いたWEBデザインのレイアウト構築や、簡易的なデザインカンプの作成が可能です。
+                            UI/UXデザインの基本的な作業を行い、チームとの共同作業もスムーズに進めることができます。
+                        </p>
+                    </div>
+                </div>
+                <div class="Skill__Level">
+                    <p class="Skill__LevelTitle">スキルレベル指標...</p>
+                    <ul class="Skill__LevelList">
+                        <li class="Skill__LevelItem">
+                            <p class="Skill__LevelNum">レベル1</p>
+                            <p class="Skill__LevelDesc">基礎を習得している</p>
+                        </li>
+                        <li class="Skill__LevelItem">
+                            <p class="Skill__LevelNum">レベル2</p>
+                            <p class="Skill__LevelDesc">小規模開発できる</p>
+                        </li>
+                        <li class="Skill__LevelItem">
+                            <p class="Skill__LevelNum">レベル3</p>
+                            <p class="Skill__LevelDesc">大規模開発できる</p>
+                        </li>
+                        <li class="Skill__LevelItem">
+                            <p class="Skill__LevelNum">レベル4</p>
+                            <p class="Skill__LevelDesc">技術伝承できる</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="Layout__Temp">
+            
+            <!-- 実績 -->
+            <section class="Result">
+                <h2 class="Result__Title">
+                    <span class="Result__TitleShape"></span>
+                    <span class="Result__TitleText">実績</span>
+                </h2>
+                <a class="Result__Link" href="https://www.robocupjunior.jp/2022keihanna_results.html">
+                    <figure class="Result__Figure">
+                        <h3 class="Result__FigTitle">ロボカップ全国3位</h3>
+                        <img src="assets/images/001-robot.png" alt="result-img">
+                        <figcaption class="Result__Desc">
+                            学生時代(2022年)にロボカップサッカーライトウェイトにて全国3位を受賞しました。
+                            赤外線の放ったボールを認識しロボット2台を巧みに駆使してゴールを競う競技です。
+                            ロボットは1から制作する必要があり、私はロボットの設計とソフトウェアをチームリーダーとして経験しました。
+                            使用していた言語はc++です。
+                            この活動がプログラマーになる自分の原点でここで養われた独創的なアイデアを育む力とそれを実現する力を活かし様々な業務に貢献しております。
+                            ロボットやプログラムに興味のある学生は私がイチオシする活動です。(笑)
+                        </figcaption>
+                    </figure>
+                </a>
+                <figure class="Result__Figure">
+                    <h3 class="Result__FigTitle">製品外観検査工程の自動化</h3>
+                    <img src="assets/images/002-web-scraper.png" alt="result-img">
+                    <figcaption class="Result__Desc">
+                        私が勤める会社での活動です。
+                        プログラムを開示することができませんが紹介します。
+                        製品外観を人が目視にて確認していた作業をpython opencvにて自動化し、アプリとして運用できるようにしました。
+                        これによって、不良流出を完全に無くすことができ、作業者負担を減らすことで会社に貢献しましたopencv自体は使用したことがありましたが人のためにアプリ開発をしたことが無かったため、作業者が使用しやすいよう意見を取り入れることで 簡単で誰もが使いやすく作成できたことが楽しく嬉しかったです。
+                    </figcaption>
+                </figure>
+                <a class="Result__Link" href="https://github.com/et-o88/scraping_portfolio">
+                    <figure class="Result__Figure">
+                        <h3 class="Result__FigTitle">福岡バリアフリーマップのスクレイピング開発</h3>
+                        <img src="assets/images/003-search-product.png" alt="result-img">
+                        <figcaption class="Result__Desc">
+                            スクレイピング業務のポートフォリオとしまして、福岡バリアフリーマップのスクレイピング開発を行いました。
+                            使用した言語はpythonでseleniumライブラリを使用しました。
+                            検索項目が「誰が」「なにする」「どこで」の3つの項目にて計1320通り(4x6x55)の検索結果をcsvでまとめるプログラムを作成しました。
+                            指定された検索情報から必要なデータを取り出し、エクスポートすることが可能です。
+                            取り出すデータ数が膨大だと、予期せぬエラー(ロードやデータの重複など)が発生することがありそれを対処するトラブルシューティング能力を鍛えることができました。
+                            現在進行形で技能向上に向けて勉強中ですが、ユーザー様のご用件に沿った業務遂行致しますので是非ご依頼ください！
+                        </figcaption>
+                    </figure>
+                </a>
+                <figure class="Result__Figure Result__Figure--border-bottom">
+                    <h3 class="Result__FigTitle">Xの自動ポストアプリ開発</h3>
+                    <img src="assets/images/004-integration.png" alt="result-img">
+                    <figcaption class="Result__Desc">
+                        アフィリエイト作業をする友人から依頼を受けXの自動ポストアプリを開発しました。
+                        使用した言語はpythonでseleniumライブラリを使用しました。また、googleスプレッドシートとXのAPIも使用しました。
+                        指定されたユーザーでスクレイピングにてXにログインしgoogleスプレッドシートに記載されている情報をポストする工程を自動化しました。
+                        ユーザー様の関係でプログラムを開示することはできませんが、Xの自動ログインは様々な制約がある中でアフィリエイト活動がスムーズに行えるようになったということで 非常に感謝されており、とても嬉しかった活動です。
+                        これは私の初めて受けたスクレイピング業務依頼でもあり、良い経験をすることができました！
+                    </figcaption>
+                </figure>
+            </section>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="Footer">
+        <h1 class="Footer__Title">Thank you for watiching!</h1>
+        <h2 class="Footer__SubTitle">
+            以上、私のポートフォリオでした。<br>
+            お仕事の依頼ぜひ検討ください！<br>
+        </h2>
+        <p class="Footer__Text">※このサイトはPC版でしかデザインが反映されておりません。随時対応していきますのでご理解ください。</p>
+    </footer>
+
+    <!-- icon取得 -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace();
+    </script>
+    
 </body>
 </html>
